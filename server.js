@@ -3,6 +3,7 @@ const connectDB = require('./database/connections');
 require('dotenv').config();
 
 // Start server
+const host = process.env.HOST;
 const port = process.env.PORT || 8080;
 const app = express();
 
@@ -10,5 +11,5 @@ const app = express();
 connectDB();
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server running on ${host}:${port}`);
 });
