@@ -39,4 +39,3 @@ Database: MongoDB Atlas
 Documentation: Swagger (with swagger-autogen)
 
 Testing: Mocha / Jest (unit tests for controllers and routes)
-
