@@ -8,7 +8,13 @@ module.exports = [
     files: ['**/*.js'],
     languageOptions: {
       ecmaVersion: 'latest',
-      sourceType: 'module',
+      sourceType: 'commonjs',
+      globals: {
+        process: 'readonly',
+        console: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+      },
     },
     plugins: {
       prettier: pluginPrettier,
@@ -24,16 +30,14 @@ module.exports = [
   },
 ];
 
-
-
 // import js from "@eslint/js";
 // import globals from "globals";
 // import { defineConfig } from "eslint/config";
 
 // export default defineConfig([
-//   { files: ["**/*.{js,mjs,cjs}"], 
-//     plugins: { js }, 
-//     extends: ["js/recommended", "plugin:prettier/recommended"], 
+//   { files: ["**/*.{js,mjs,cjs}"],
+//     plugins: { js },
+//     extends: ["js/recommended", "plugin:prettier/recommended"],
 //     languageOptions: { globals: globals.browser } },
 //   { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
 // ]);
